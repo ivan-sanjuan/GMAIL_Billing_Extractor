@@ -2,6 +2,7 @@ import requests
 from _access_token import get_access_token
 from _subject import get_subject
 from urllib.parse import urljoin
+import fitz
 import pprint
 import base64
 
@@ -34,4 +35,3 @@ for p in messages:
 
                 with open(f'pdf_files/{filename}', 'wb') as f:
                     f.write(decoded_bytes)
-                    
