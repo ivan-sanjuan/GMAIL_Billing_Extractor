@@ -3,3 +3,5 @@ client_secret.json
 _access_token.py
 __pycache__/_access_token.cpython-313.pyc
 _subject.py
+pdf_pass.py
+*.pyc
