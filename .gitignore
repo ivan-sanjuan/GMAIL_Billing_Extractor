@@ -1,0 +1,5 @@
+client_secret.json
+*.pdf
+_access_token.py
+__pycache__/_access_token.cpython-313.pyc
+_subject.py
