@@ -1,6 +1,7 @@
 from pdf_pass import pdf_pass
 import pytesseract
 from PIL import Image
+import re
 import io
 import fitz
 import os
@@ -19,4 +20,8 @@ for page in os.listdir(folder_path):
     pix = page3.get_pixmap(matrix=mat)
     img = Image.open(io.BytesIO(pix.tobytes()))
     text = pytesseract.image_to_string(img)
-    print(text)
+    pattern = r'^[A-Z][a-z]+\s+\d{1,2}'
+    list_result = re.split('\n',text)
+    for item in list_result:
+        if re.findall(pattern,item):
+            print(item)
